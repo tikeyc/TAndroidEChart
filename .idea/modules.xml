@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TAndroidEChart.iml" filepath="$PROJECT_DIR$/TAndroidEChart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tandroidechartlibrary/tandroidechartlibrary.iml" filepath="$PROJECT_DIR$/tandroidechartlibrary/tandroidechartlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xutils/xutils.iml" filepath="$PROJECT_DIR$/xutils/xutils.iml" />
+    </modules>
+  </component>
+</project>
