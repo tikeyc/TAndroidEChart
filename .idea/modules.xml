@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/TAndroidEChart.iml" filepath="$PROJECT_DIR$/TAndroidEChart.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tandroidechartlibrary/tandroidechartlibrary.iml" filepath="$PROJECT_DIR$/tandroidechartlibrary/tandroidechartlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xutils/xutils.iml" filepath="$PROJECT_DIR$/xutils/xutils.iml" />
     </modules>
   </component>
 </project>
