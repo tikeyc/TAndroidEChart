@@ -1,6 +1,8 @@
 # TAndroidEChart
 使用百度前端EChart框架封装的Android版本
 
+![image](https://github.com/tikeyc/TAndroidEChart/blob/master/readme/screen1.gif)
+
 # 添加依赖： 
  1——：gradle     
  Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle        
