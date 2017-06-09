@@ -2,7 +2,7 @@
 使用百度前端EChart框架封装的Android版本
 
 # 添加依赖： 
- 1——：gradle
+ 1——：gradle     
  Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle    
 allprojects {   
 		repositories {   
@@ -13,22 +13,21 @@ allprojects {
 
  Step 2:compile 'com.github.tikeyc:TAndroidEChart:v1.0'到你app的build.gradle    
 dependencies {    
-	   compile 'com.github.tikeyc:TAndroidEChart:v1.0'   
+     compile 'com.github.tikeyc:TAndroidEChart:v1.0'   
 }  
  2——：或者直接下载完整项目，import一个module：tandroidechartlibrary
 
 # 如何使用：
-xml:
+xml:     
 <com.tikeyc.tandroidechartlibrary.TEChartWebView    
         android:id="@+id/barChartWebView"    
         android:layout_width="match_parent"    
         android:layout_height="match_parent">    
 </com.tikeyc.tandroidechartlibrary.TEChartWebView>   
 
-public class TBarChartActivity extends TBaseActivity {    
+public class TBarChartActivity extends TBaseActivity {     
     @ViewInject(R.id.barChartWebView)   
     private TEChartWebView barChartWebView;   
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.isLandScape = true;
@@ -41,18 +40,14 @@ public class TBarChartActivity extends TBaseActivity {
 
         initData();
         initView();
-    }
+    }     
+         
+    private void initData() {     
 
-
-
-    private void initData() {
-
-    }
-
-
-    private void initView() {
+    }     
+    
+    private void initView() {     
         x.view().inject(this);
-
         //
         navigationBar_title_tv.setText("BarChart");
         //设置数据源
@@ -63,7 +58,6 @@ public class TBarChartActivity extends TBaseActivity {
             }
         });
     }
-
 
     /*根据https://mvnrepository.com/artifact/com.github.abel533/ECharts
      *结合http://echarts.baidu.com/examples.html官方实例   
@@ -102,11 +96,11 @@ public class TBarChartActivity extends TBaseActivity {
         Legend legend = new Legend();   
         legend.data(legend1,legend2,legend3);   
         option.legend(legend);   
-        //grid   
-//            Grid grid = new Grid();   
-//            grid.y2(80);   
-//            option.grid(grid);   
-        //xAxis   
+        //grid        
+        //Grid grid = new Grid();        
+        //grid.y2(80);        
+        //option.grid(grid);        
+        //xAxis        
         List<Axis> xAxis = new ArrayList<Axis>();   
         CategoryAxis categoryAxis = new CategoryAxis();   
         {   
