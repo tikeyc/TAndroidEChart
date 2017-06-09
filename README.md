@@ -3,8 +3,8 @@
 
 # 添加依赖： 
  1——：gradle     
- Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle    
-allprojects {   
+ Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle        
+ allprojects {   
 		repositories {   
 			...   
 			maven { url 'https://jitpack.io' }   
@@ -18,6 +18,7 @@ dependencies {
  2——：或者直接下载完整项目，import一个module：tandroidechartlibrary
 
 # 如何使用：
+```
 xml:     
 <com.tikeyc.tandroidechartlibrary.TEChartWebView    
         android:id="@+id/barChartWebView"    
@@ -167,3 +168,4 @@ public class TBarChartActivity extends TBaseActivity {
         return option;   
     }   
 }   
+```
