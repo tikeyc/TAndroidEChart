@@ -28,6 +28,7 @@ public class TLineChartActivity extends TBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         this.isLandScape = true;
         super.onCreate(savedInstanceState);
+        //设置横屏
         if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
@@ -49,7 +50,7 @@ public class TLineChartActivity extends TBaseActivity {
 
         //
         navigationBar_title_tv.setText("LineChart");
-        //
+        //设置数据源
         lineChartWebView.setDataSource(new TEChartWebView.DataSource() {
             @Override
             public GsonOption markLineChartOptions() {
@@ -58,6 +59,11 @@ public class TLineChartActivity extends TBaseActivity {
         });
     }
 
+    /**根据https://mvnrepository.com/artifact/com.github.abel533/ECharts
+     * 结合http://echarts.baidu.com/examples.html官方实例
+     * 配置json数据
+     * @return
+     */
     public GsonOption getLineChartOptions() {
 
         //地址:http://echarts.baidu.com/echarts2/doc/example/line5.html

@@ -44,6 +44,7 @@ public class TBarChartActivity extends TBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         this.isLandScape = true;
         super.onCreate(savedInstanceState);
+        //设置横屏
         if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
@@ -65,7 +66,7 @@ public class TBarChartActivity extends TBaseActivity {
 
         //
         navigationBar_title_tv.setText("BarChart");
-        //
+        //设置数据源
         barChartWebView.setDataSource(new TEChartWebView.DataSource() {
             @Override
             public GsonOption markLineChartOptions() {
@@ -75,6 +76,11 @@ public class TBarChartActivity extends TBaseActivity {
     }
 
 
+    /**根据https://mvnrepository.com/artifact/com.github.abel533/ECharts
+     * 结合http://echarts.baidu.com/examples.html官方实例
+     * 配置json数据
+     * @return
+     */
     public GsonOption getLineAndBarChartOption() {
         //http://echarts.baidu.com/echarts2/doc/example/mix1.html
         GsonOption option = new GsonOption();
