@@ -3,8 +3,8 @@
 
 或者访问我的简书：http://www.jianshu.com/p/6a44b4772604
 
-![image](https://github.com/tikeyc/TAndroidEChart/blob/master/readme/screen1.gif)
-更多实例见： http://echarts.baidu.com/examples.html   
+![image](https://github.com/tikeyc/TAndroidEChart/blob/master/readme/screen1.gif)      
+# 更多实例见： http://echarts.baidu.com/examples.html   
 # 添加依赖： 
  1——：gradle     
  Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle        
