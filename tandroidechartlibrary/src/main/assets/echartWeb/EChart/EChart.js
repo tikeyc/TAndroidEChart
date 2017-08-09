@@ -18,23 +18,29 @@ function initChartView() {
 	 *Android表示JAVA类TEChartWebView中的addJavascriptInterface(new TEChartWebView.WebAppEChartInterface(getContext()), "Android");中的Android
 	 *getChartOptions为WebAppEChartInterface接口中的方法
 	 */
-    var option = JSON.parse(Android.getChartOptions());
-    var lineChartDoc = document.getElementById('lineChart');
-    /*
-     *设置lineChart的高度为Android中控件WebView的高度（达到不能滑动且显示完全的效果）
-     *var height = document.documentElement.clientHeight;
-     *var height = window.innerHeight
-     *这2个获取高度建议选择第二个
-     */
-    var height = window.innerHeight;
-//    toast("height" + height.toString());
-    $(lineChartDoc).css('height', height);
-    //
-    var lineChart = echarts.init(lineChartDoc);
-    lineChart.setOption(option);
+    var optionString = Android.getChartOptions();
+    refreshEChartWithOption(optionString);
 //    lineChart.setOption(makeStaticOptions());//直接在js中获取静态数据
 }
 
+function refreshEChartWithOption(optionString) {
+    Android.showToast("refreshEChartWithOption");
+
+    var option = JSON.parse(optionString);
+    var lineChartDoc = document.getElementById('lineChart');
+     /*
+      *设置lineChart的高度为Android中控件WebView的高度（达到不能滑动且显示完全的效果）
+      *var height = document.documentElement.clientHeight;
+      *var height = window.innerHeight
+      *这2个获取高度建议选择第二个
+      */
+     var height = window.innerHeight;
+//    toast("height" + height.toString());
+     $(lineChartDoc).css('height', height);
+     //
+     var lineChart = echarts.init(lineChartDoc);
+     lineChart.setOption(option);
+}
 
 //地址：http://echarts.baidu.com/echarts2/doc/example/line8.html
 function makeStaticOptions(){

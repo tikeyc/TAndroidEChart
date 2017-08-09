@@ -16,6 +16,9 @@ import com.github.abel533.echarts.json.GsonOption;
 
 public class TEChartWebView extends WebView {
 
+    //在EChart.html中加载标签中默认调用了function toast(msg)，可以设置为false,显示自定义的加载提示
+    public boolean isShowLoadingToast = true;
+
     public TEChartWebView(Context context) {
         this(context,null);
     }
@@ -51,7 +54,7 @@ public class TEChartWebView extends WebView {
 
         @JavascriptInterface
         public void showToast(String msg) {
-            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+            if (isShowLoadingToast) Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
         }
 
         /**
@@ -69,6 +72,17 @@ public class TEChartWebView extends WebView {
             return null;
         }
 
+    }
+
+    /**java调用js的refreshEChartWithGsonOption方法刷新echart
+     * 不能在第一时间就用此方法来显示图表，因为第一时间html的标签还未加载完成，不能获取到标签值
+     * 需先设置数据源DataSource，后续视具体情况来手动刷新
+     * @param option
+     */
+    public void refreshEChartWithGsonOption(GsonOption option) {
+        String optionString = option.toString();
+        String call = "javascript:refreshEChartWithOption('" + optionString + "')";
+        loadUrl(call);
     }
 
     ////////////////////////////数据源
