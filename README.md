@@ -62,6 +62,8 @@ public class TBarChartActivity extends TBaseActivity {
                 return getLineAndBarChartOption();
             }
         });
+	//不想显示加载HTML的toast
+	barChartWebView.isShowLoadingToast = false;
     }
 
     /*根据https://mvnrepository.com/artifact/com.github.abel533/ECharts
@@ -172,4 +174,9 @@ public class TBarChartActivity extends TBaseActivity {
         return option;   
     }   
 }   
+```
+
+```
+可能后续操作需要刷新图表，可以这样调用（注意：不能在第一时间就用此方法来显示图表，因为第一时间html的标签还未加载完成，不能获取到标签值）
+barChartWebView.refreshEChartWithGsonOption(getLineAndBarChartOption());
 ```
