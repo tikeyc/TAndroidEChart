@@ -17,7 +17,16 @@ import com.github.abel533.echarts.json.GsonOption;
 public class TEChartWebView extends WebView {
 
     //在EChart.html中加载标签中默认调用了function toast(msg)，可以设置为false,显示自定义的加载提示
-    public boolean isShowLoadingToast = true;
+    private boolean isShowLoadingToast = true;
+
+    public void setShowLoadingToast(boolean showLoadingToast) {
+        isShowLoadingToast = showLoadingToast;
+    }
+
+    public boolean isShowLoadingToast() {
+
+        return isShowLoadingToast;
+    }
 
     public TEChartWebView(Context context) {
         this(context,null);
