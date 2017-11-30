@@ -11,7 +11,7 @@
 ![image](https://github.com/tikeyc/TAndroidEChart/blob/master/readme/screen1.gif)      
 # 更多实例见： http://echarts.baidu.com/examples.html   
 # 添加依赖： 
- 1——：gradle     
+ -：gradle     
  Step 1：添加maven { url 'https://jitpack.io' } 到project的build.gradle        
  allprojects {   
 		repositories {   
@@ -20,11 +20,12 @@
 		}   
 	}   
 
- Step 2:compile 'com.github.tikeyc:TAndroidEChart:v1.0'到你app的build.gradle    
-dependencies {    
-     compile 'com.github.tikeyc:TAndroidEChart:v1.0'   
-}  
- 2——：或者直接下载完整项目，import一个module：tandroidechartlibrary
+versionNum为最新版本的值 如：v1.2.1
+Step 2: 添加compile 'com.github.tikeyc:TAndroidEChart:versionNum'到你app的build.gradle
+dependencies {
+compile 'com.github.tikeyc:TAndroidEChart:versionNum'
+} 
+ -：或者直接下载完整项目，import一个module：tandroidechartlibrary
 
 # 如何使用：
 ```
