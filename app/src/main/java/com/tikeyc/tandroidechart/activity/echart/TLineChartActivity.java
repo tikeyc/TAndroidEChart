@@ -53,7 +53,7 @@ public class TLineChartActivity extends TBaseActivity {
         //设置数据源
         lineChartWebView.setDataSource(new TEChartWebView.DataSource() {
             @Override
-            public GsonOption markLineChartOptions() {
+            public GsonOption markChartOptions() {
                 return getLineChartOptions();
             }
         });

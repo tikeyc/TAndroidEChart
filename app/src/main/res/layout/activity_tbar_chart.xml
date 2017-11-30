@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/navigationbar"
-        layout="@layout/navigationbar">
-    </include>sc
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:background="@mipmap/navigationbar_bg"
+        android:gravity="center">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></LinearLayout>
+        <TextView
+            android:id="@+id/navigationBar_title_tv"
+            android:text="刷新图表"
+            android:textColor="@android:color/holo_red_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC">
+        </LinearLayout>
+    </LinearLayout>
 
     <com.tikeyc.tandroidechartlibrary.TEChartWebView
         android:id="@+id/barChartWebView"
@@ -17,4 +38,4 @@
         android:layout_height="match_parent">
     </com.tikeyc.tandroidechartlibrary.TEChartWebView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
