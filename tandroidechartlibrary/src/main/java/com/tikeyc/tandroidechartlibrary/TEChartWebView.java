@@ -109,7 +109,7 @@ public class TEChartWebView extends WebView {
      */
     public void refreshEchartsWithOption(GsonOption option) {
         if (dataSource == null) {
-            assert false : "ataSource == null";
+            assert false : "dataSource == null";
         }
         String optionString = option.toString();
         String call = "javascript:refreshEchartsWithOption('" + optionString + "')";

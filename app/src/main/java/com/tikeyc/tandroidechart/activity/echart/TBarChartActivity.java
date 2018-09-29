@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 
+import com.github.abel533.echarts.DataZoom;
 import com.github.abel533.echarts.Legend;
 import com.github.abel533.echarts.Toolbox;
 import com.github.abel533.echarts.Tooltip;
@@ -12,6 +13,7 @@ import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.axis.AxisLabel;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.DataZoomType;
 import com.github.abel533.echarts.code.Magic;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Tool;
@@ -30,6 +32,7 @@ import com.tikeyc.tandroidechart.activity.base.TBaseActivity;
 import com.tikeyc.tandroidechartlibrary.TEChartConstant;
 import com.tikeyc.tandroidechartlibrary.TEChartWebView;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -154,6 +157,15 @@ public class TBarChartActivity extends TBaseActivity {
 //            Grid grid = new Grid();
 //            grid.y2(80);
 //            option.grid(grid);
+        //dataZoom
+        DataZoom dataZoom = new DataZoom();
+        dataZoom.show(true);
+        dataZoom.type(DataZoomType.slider);
+        dataZoom.start(50);
+        dataZoom.end(70);
+        List<DataZoom> dataZooms = new ArrayList<>();
+        dataZooms.add(dataZoom);
+        option.dataZoom(dataZooms);
         //xAxis
         List<Axis> xAxis = new ArrayList<Axis>();
         CategoryAxis categoryAxis = new CategoryAxis();

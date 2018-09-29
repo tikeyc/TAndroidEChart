@@ -4,8 +4,10 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
+import com.github.abel533.echarts.DataZoom;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.DataZoomType;
 import com.github.abel533.echarts.code.Magic;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
@@ -18,6 +20,9 @@ import com.tikeyc.tandroidechartlibrary.TEChartWebView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TLineChartActivity extends TBaseActivity {
 
@@ -85,6 +90,16 @@ public class TLineChartActivity extends TBaseActivity {
         categoryAxis.boundaryGap(false);
         categoryAxis.data(0, 10, 20, 30, 40, 50, 60, 70, 80);
         option.yAxis(categoryAxis);
+
+        //dataZoom
+        DataZoom dataZoom = new DataZoom();
+        dataZoom.show(true);
+        dataZoom.type(DataZoomType.slider);
+        dataZoom.start(50);
+        dataZoom.end(70);
+        List<DataZoom> dataZooms = new ArrayList<>();
+        dataZooms.add(dataZoom);
+        option.dataZoom(dataZooms);
 
         Line line = new Line();
         line.smooth(true).name("高度(km)与气温(°C)变化关系").data(15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5).itemStyle().normal().lineStyle().shadowColor("rgba(0,0,0,0.4)");
