@@ -21,7 +21,7 @@
 		}   
 	}   
 
-versionNum为最新版本的值 如：v1.3.1    
+versionNum为最新版本的值 如：1.3.1    
 Step 2: 添加compile 'com.github.tikeyc:TAndroidEChart:versionNum'到你app的build.gradle     
 dependencies {   
      compile 'com.github.tikeyc:TAndroidEChart:versionNum'    
